@@ -23,3 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Top10Cartoons.urls')),
 ]
+
+handler404 = pageNotFound
