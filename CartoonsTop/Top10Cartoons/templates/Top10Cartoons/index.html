@@ -4,7 +4,11 @@
 
 {% block content %}
 <ul class="list-articles">
+
 	{% for p in posts %}
+	{% if p.photo %}
+	<p><img class="img-article-left thumb" src="{{p.photo.url}}"></p>
+	{% endif %}
 			<li><h2>{{p.tittle}}</h2>
 	{% autoescape on %}
 	{{p.content|linebreaks|truncatewords:50}}

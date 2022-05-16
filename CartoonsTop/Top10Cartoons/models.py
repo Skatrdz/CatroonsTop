@@ -3,7 +3,7 @@ from django.urls import reverse
 
 
 class Top10Cartoons(models.Model):
-    tittle = models.CharField(max_length=255)
+    tittle = models.CharField(max_length=255, verbose_name="Боже мой")
     content = models.TextField(blank=True)
     photo = models.ImageField(upload_to="photos/%Y/%m/%d")
     time_crete = models.DateTimeField(auto_now_add=True)
