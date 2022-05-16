@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect
 from .models import *
-menu = ["О сайте", "Добавить Мультфильм", "Войти"]
+menu = ["Menu", "Watchlist", "Sign In"]
 
 def index(request):
     posts = Top10Cartoons.objects.all()
