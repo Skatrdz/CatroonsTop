@@ -26,6 +26,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Top10Cartoons.urls')),
+
 ]
 
 if settings.DEBUG:

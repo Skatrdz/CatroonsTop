@@ -1,7 +1,12 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect
 from .models import *
-menu = ["Menu", "Watchlist", "Sign In"]
+menu = [
+    {'title': "Menu", 'url_name': 'mainMenu'},
+    {'title': "Watchlist", 'url_name': 'watchlist'},
+    {'title': "Sign in", 'url_name': 'login'},
+
+]
 
 def index(request):
     posts = Top10Cartoons.objects.all()
@@ -10,6 +15,12 @@ def index(request):
 def about(request):
     return render(request, 'Top10Cartoons/about.html', {'menu': menu, 'title': 'О сайте вот этом'})
 
+def mainMenu(request):
+    return HttpResponse("Тут вообще нужна другая структура но я пока не понимаю какая обьяснить кто нить")
+def watchlist(request):
+    return HttpResponse("Вотчлист, если не авторизован на авторизацию марш")
+def login(request):
+    return HttpResponse("Ну логайся уже: тут же должна быть дето кнопка на регистрацию")
 
 
 def categories(request, categories):
