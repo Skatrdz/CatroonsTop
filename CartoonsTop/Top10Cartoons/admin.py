@@ -5,9 +5,12 @@ from django.contrib import admin
 from .models import *
 
 class Top10CartoonsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'tittle', 'time_crete', 'photo', 'is_published')
-    list_display_links = ('id', 'tittle')
-    search_fields = ('tittle', 'content')
+    list_display = ('id', 'title', 'time_crete', 'photo', 'is_published')
+    list_display_links = ('id', 'title')
+    search_fields = ('title', 'content')
+
+
 
 
 admin.site.register(Top10Cartoons, Top10CartoonsAdmin)
+admin.site.register(Category)

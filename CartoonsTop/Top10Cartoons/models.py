@@ -3,7 +3,7 @@ from django.urls import reverse
 
 
 class Top10Cartoons(models.Model):
-    tittle = models.CharField(max_length=255, verbose_name="title")
+    title = models.CharField(max_length=255, verbose_name="title")
     slug = models.CharField(max_length=255, verbose_name="slug")
     content = models.TextField(blank=True)
     photo = models.ImageField(upload_to="photos/%Y/%m/%d")
@@ -19,11 +19,9 @@ class Top10Cartoons(models.Model):
     class Meta:
         verbose_name = 'Top 10 Cartoons'
         verbose_name_plural ='Top 10 Cartoons'
-        ordering = ['-time_crete', 'tittle']
+        ordering = ['-time_crete', 'title']
 
 class Category(models.Model):
     title = models.CharField(max_length=255, verbose_name="title")
     slug = models.CharField(max_length=255, verbose_name="slug")
-
-
 
