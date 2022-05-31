@@ -9,8 +9,10 @@ menu = [
 ]
 
 def index(request):
-    posts = Top10Cartoons.objects.all()
+    posts = Film.objects.all()
+    filmCategory = Film.objects.get(title="Rick And Morty").category.all()
     tags = {
+        'filmCategory': filmCategory,
         'posts': posts,
         'menu': menu,
         'title': 'main page'

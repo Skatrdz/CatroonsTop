@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 
 
-class Top10Cartoons(models.Model):
+class Film(models.Model):
     title = models.CharField(max_length=255, verbose_name="title")
     slug = models.CharField(max_length=255, verbose_name="slug")
     content = models.TextField(blank=True)
@@ -22,6 +22,6 @@ class Top10Cartoons(models.Model):
         ordering = ['-time_crete', 'title']
 
 class Category(models.Model):
-    title = models.CharField(max_length=255, verbose_name="title")
+    title = models.CharField(max_length=255, verbose_name="title", primary_key=True)
     slug = models.CharField(max_length=255, verbose_name="slug")
 

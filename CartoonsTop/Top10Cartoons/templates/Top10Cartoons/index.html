@@ -9,7 +9,11 @@
 	{% if p.photo %}
 	<p><img class="img-article-left thumb" src="{{p.photo.url}}"></p>
 	{% endif %}
-			<li><h2>{{p.tittle}}</h2>
+			<li><h2>{{p.title}}</h2>
+			<li><h2>{{p.title}}</h2>
+					{% for y in filmCategory %}
+						<li>{{y.title}}
+					{% endfor %}
 	{% autoescape on %}
 	{{p.content|linebreaks|truncatewords:50}}
 	{% endautoescape %}
@@ -17,5 +21,6 @@
 			<p class="link-read-post"><a href="#">More About</a></p>
 			</li>
 	{% endfor %}
+
 </ul>
 {% endblock %}

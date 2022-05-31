@@ -12,5 +12,5 @@ class Top10CartoonsAdmin(admin.ModelAdmin):
 
 
 
-admin.site.register(Top10Cartoons, Top10CartoonsAdmin)
+admin.site.register(Film, Top10CartoonsAdmin)
 admin.site.register(Category)
