@@ -10,7 +10,12 @@ menu = [
 
 def index(request):
     posts = Top10Cartoons.objects.all()
-    return render(request, 'Top10Cartoons/index.html', {'posts': posts, 'menu': menu, 'title': 'Ну страница вот эта главная'})
+    tags = {
+        'posts': posts,
+        'menu': menu,
+        'title': 'main page'
+    }
+    return render(request, 'Top10Cartoons/index.html', context=tags)
 
 def about(request):
     return render(request, 'Top10Cartoons/about.html', {'menu': menu, 'title': 'О сайте вот этом'})
