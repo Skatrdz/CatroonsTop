@@ -10,7 +10,7 @@ menu = [
 
 def index(request):
     posts = Film.objects.all()
-    filmCategory = Film.objects.get(title="Rick And Morty").category.all()
+    filmCategory = Film_Category.objects.all()
     tags = {
         'filmCategory': filmCategory,
         'posts': posts,
