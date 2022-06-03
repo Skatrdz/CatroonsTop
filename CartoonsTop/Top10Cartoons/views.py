@@ -10,9 +10,11 @@ menu = [
 
 def index(request):
     posts = Film.objects.all()
-    filmCategory = Film_Category.objects.all()
+    doom = ""
+    for e in Film.objects.all():
+        doom = e.category
     tags = {
-        'filmCategory': filmCategory,
+        'doom': doom,
         'posts': posts,
         'menu': menu,
         'title': 'main page'
