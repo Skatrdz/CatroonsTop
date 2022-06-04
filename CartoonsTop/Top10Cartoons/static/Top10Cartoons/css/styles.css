@@ -20,7 +20,7 @@ img {max-width: 600px; height: auto;}
 
 img.img-article-left {
 	max-width: 300px;
-	height: auto;
+	max-height: 200px;
 	float: left;
 	padding: 0 10px 10px 0;
 }
@@ -29,7 +29,10 @@ img.img-article-left.thumb {
 	max-width: 150px;
 	height: auto;
 }
+p.category {
+	float: right;
 
+}
 p.link-read-post {
 	text-align: right;
 }
@@ -368,6 +371,7 @@ ul.lang-list li a:hover {color: #fdc073;}
 	text-decoration: underline;
 	color: #aaa;
 }
+<!-- CSS only -->
 
 .form-input {
     width: 300px;
@@ -390,3 +394,6 @@ ul.lang-list li a:hover {color: #fdc073;}
     min-width: 200px;
     font-size: 16px;
 }
+
+
+
