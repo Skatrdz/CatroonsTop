@@ -9,4 +9,5 @@ urlpatterns = [
     path('mainMenu/', mainMenu, name='mainMenu'),
     path('watchlist/', watchlist, name='watchlist'),
     path('login/', login, name='login'),
+    path('TestPage/', TestPage, name='TestPage')
 ]

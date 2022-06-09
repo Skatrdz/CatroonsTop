@@ -1,5 +1,6 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect
+from .forms import *
 from .models import *
 menu = [
     {'title': "Menu", 'url_name': 'mainMenu'},
@@ -20,6 +21,16 @@ def index(request):
         'title': 'main page'
     }
     return render(request, 'Top10Cartoons/index.html', context=tags)
+def TestPage(request):
+    if request.method == 'POST':
+        form = TestForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+    else:
+        form = TestForm()
+    return render(request, 'Top10Cartoons/TestPage.html', {'form': form, 'menu': menu, 'title': 'Добавление статьи'})
+
+
 
 def about(request):
     return render(request, 'Top10Cartoons/about.html', {'menu': menu, 'title': 'О сайте вот этом'})
